@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+   <title>Promotion - Twój bot reklamowy</title>
+   <script src="assets/jquery-3.4.1.min.js"></script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+   <div id="action-notice"></div>
+   <header class="page-header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark nav-custom">
+  <a class="navbar-brand" href="index.html"><h3>Promotion</h3></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse nav-content" id="navbarText">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="ekipa.html">Ekipa</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="regulamin.html">Regulamin</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://discord.gg/yvRruXk">Discord</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+         <div class="slogan">
+            <h2>Promotion to najlepszy bot</h2>
+            <p>Pozdrawia administracja promotion</p>
+            <div class="srv">
+               <button onclick="copyTextFromElement('copyLink')" id="copyLink" value="https://bit.ly/promotiontm" class="button button-primary copy" >https://bit.ly/promotiontm</button>
+            </div>
+         </div>
+      </div>
+   </header>
+   <main class="page-main">
+      <div id="info">
+         <div class="container">
+            <h3>Promotion - Regulamin </h3>
+            <p>
+               <br>Nie spamimy weryfikacjami</br>
+               <br>kanał reklam musi być widoczny dla everyone</br>
+               <br>reszta comming<br>
+   </main>
+   <footer class="page-footer">
+      <div class="container">
+         <div class="copyr">Copyright © 2020 <a href="Promotion">Promotion</a> | Wszelkie prawa zastrzeżone</div>
+      </div>
+   </footer>
+   <script src="assets/js/scroll.js"></script>
+   <script src="assets/js/bootstrap.min.js"></script>
+   <script src="assets/js/scripts.js"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <script>
+      function copyTextFromElement(elementID) {
+      	let element = document.getElementById(elementID);
+      	let elementText = element.textContent;
+      	copyText(elementText);
+
+      }
+
+
+      function copyText(text) {
+      	navigator.clipboard.writeText(text);
+      }
+   </script>
+  
+</body>
+</html>

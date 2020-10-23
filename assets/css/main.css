@@ -1,0 +1,473 @@
+* {
+     margin:0;
+     padding:0;
+}
+ html, body {
+     color:#565656;
+     font-family:'Titillium Web', sans-serif;
+}
+ h1, h2, h3, h4, h5 {
+     font-weight:bold;
+}
+ a {
+     cursor:pointer;
+     transition: 0.5s all;
+}
+ a, a:hover, a:active {
+     text-decoration:none;
+     color:inherit;
+}
+ input, input:focus, input:active, input:hover, button, button:hover, button:active, button:focus, textarea:focus {
+     outline:none;
+}
+ input {
+     padding:1em 2em;
+     background:#e3e3e3;
+     border:none;
+     border-radius:3px;
+}
+
+
+
+.nav.link {
+  font-size: 22px;
+}
+.nav-custom {
+  background: none !important;
+  color: #fff !important;
+}
+.navbar {
+  padding:15px 0 !important;
+}
+
+ .button {
+     border:none;
+     color:inherit;
+     border-radius:30px;
+     padding:10px 50px;
+     transition:0.5s all;
+}
+ .button:active {
+     transform:scale(0.9);
+}
+ .button-send {
+     display:block;
+     margin:30px auto 0 auto;
+     padding:10px 100px;
+     background:rgba(255,255,255, 0.15)
+}
+ .lead {
+     margin:0 auto;
+     margin-top:20px;
+}
+ .btn-outline {
+     color:rgb(245, 163, 3);
+     border-color:rgb(245, 163, 3);
+}
+ .btn-outline:hover {
+     box-shadow:0 0 30px 1px rgba(245, 163, 3, 0.7);
+     color:#fff;
+     background:rgb(245, 163, 3);
+}
+ .btn-outline:focus {
+     box-shadow:inherit;
+}
+ .button-primary {
+     background-color:#4266f5;
+     filter:drop-shadow(0 0 20px #4266f5);
+     transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+     appearance: none;
+     -webkit-appearance: none;
+     position:relative;
+}
+ .button-primary:before, .button-primary:after {
+     position: absolute;
+     content: '';
+     display: block;
+     width: 140%;
+     height: 100%;
+     left: -20%;
+     z-index: -1000;
+     transition: all ease-in-out 0.5s;
+     background-repeat: no-repeat;
+}
+ .button-primary:before{
+     display: none;
+     top: -75%;
+     background-image: radial-gradient(circle, #f5a303 20%, transparent 20%), radial-gradient(circle, transparent 20%, #f5a303 20%, transparent 30%), radial-gradient(circle, #f5a303 20%, transparent 20%), radial-gradient(circle, #f5a303 20%, transparent 20%), radial-gradient(circle, transparent 10%, #f5a303 15%, transparent 20%), radial-gradient(circle, #f5a303 20%, transparent 20%), radial-gradient(circle, #f5a303 20%, transparent 20%), radial-gradient(circle, #f5a303 20%, transparent 20%), radial-gradient(circle, #f5a303 20%, transparent 20%);
+     background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+ .button-primary:after{
+     display: none;
+     bottom: -75%;
+     background-image: radial-gradient(circle, #f5a303 20%, transparent 20%), radial-gradient(circle, #f5a303 20%, transparent 20%), radial-gradient(circle, transparent 10%, #f5a303 15%, transparent 20%), radial-gradient(circle, #f5a303 20%, transparent 20%), radial-gradient(circle, #f5a303 20%, transparent 20%), radial-gradient(circle, #f5a303 20%, transparent 20%), radial-gradient(circle, #f5a303 20%, transparent 20%);
+     background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+ .button-primary:hover{
+     transform: scale(1.1);
+     background-color: darken(#f5a303, 5%);
+     box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.button-primary:active{
+    transform: scale(0.9);
+    background-color: darken(#f5a303, 5%);
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+
+ @media screen and (max-width:1199px) {
+     .carousel .col-xl-4 {
+         width:100%;
+         display:block !important;
+         text-align:center;
+    }
+}
+ @media screen and (max-width:699px) {
+     #nav-content {
+         display:none;
+    }
+     #nav-content {
+         position:fixed;
+         top:0;
+         left:0;
+         width:100vw;
+         height:100vh;
+         background:rgba(0,0,0,0.7);
+         z-index:1;
+         padding-top:70px;
+         overflow-y:scroll;
+    }
+     #nav-content a {
+         text-align:center;
+         display:block;
+         margin:30px 0;
+         text-transform: uppercase;
+    }
+}
+ @media screen and (min-width:700px) and (max-width:1023px) {
+     #nav-content {
+         display:none;
+    }
+     #nav-content {
+         position:fixed;
+         top:0;
+         left:0;
+         width:100vw;
+         height:100vh;
+         background:rgba(0,0,0,0.7);
+         z-index:1;
+         padding-top:70px;
+         overflow-y:scroll;
+    }
+     #nav-content a {
+         text-transform:uppercase;
+         text-align:center;
+         display:block;
+         margin:30px 0;
+    }
+}
+ @media screen and (min-width:1024px) {
+     #nav-toggle {
+         display:none;
+    }
+     #nav-content {
+         display:block;
+    }
+     #nav-content li {
+         display:inline-block;
+         color:#dce0e1;
+    }
+}
+/* Nawigacja */
+ #nav-toggle {
+     position:fixed;
+     top:43px;
+     right:25px;
+     cursor:pointer;
+     width:45px;
+     height:45px;
+     transform:rotate(0deg);
+     transition:.5s ease-in-out;
+     z-index:3;
+}
+ #nav-toggle span {
+     display:block;
+     position:absolute;
+     width:100%;
+     height:4px;
+     background:#fff;
+     border-radius:9px;
+     opacity:1;
+     left:0;
+     transform:rotate(0deg);
+     transition:.25s ease-in-out;
+     box-shadow:2px 2px 4px #000;
+}
+ #nav-toggle span:nth-child(1) {
+     top:0;
+}
+ #nav-toggle span:nth-child(2), #nav-toggle span:nth-child(3) {
+     top:12px;
+}
+ #nav-toggle span:nth-child(4) {
+     top:24px;
+}
+ #nav-toggle.open span:nth-child(1) {
+     top:12px;
+     width:0%;
+     left:50%;
+}
+ #nav-toggle.open span:nth-child(2) {
+     transform:rotate(45deg);
+}
+ #nav-toggle.open span:nth-child(3) {
+     transform:rotate(-45deg);
+}
+ #nav-toggle.open span:nth-child(4) {
+     top:12px;
+     width:0%;
+     left:50%;
+}
+ #nav-content {
+     list-style-type: none;
+}
+ #nav-content a:hover {
+     color:#fff;
+     text-shadow:0 0 10px rgba(255, 255, 255, 0.22);
+     border-radius:10px;
+}
+ #nav-content a {
+     padding:5px 15px;
+}
+ header {
+     position:relative;
+     color:#fff;
+     background:url('../images/background.jpg') no-repeat top left #000;
+     background-size:cover;
+}
+ .navigation {
+     padding:15px 0;
+     display:flex;
+     align-items:center;
+     justify-content: space-between;
+}
+ .logo img {
+     width:200px;
+}
+ .slogan {
+     text-align:center;
+     padding:130px 0;
+}
+ .slogan p {
+     font-size:1.4em;
+}
+ .srv {
+     text-align:center;
+     font-weight:bold;
+     font-size:1.2em;
+     margin-top:70px;
+}
+ .scroll {
+     cursor:pointer;
+     padding:10px;
+     position:absolute;
+     color: blue!important;
+     left:50%;
+     bottom:10px;
+     transform:translateX(-50%);
+}
+ .scroll img {
+     width:25px;
+     transition:0.4s all;
+}
+ .scroll:hover img {
+     filter:drop-shadow(0 0 20px #4266f5);
+}
+ main > div {
+     padding:70px 0;
+}
+ #info {
+     text-align:center;
+}
+ #info .container > p {
+     margin-top:20px;
+     font-size:1.1em;
+}
+ .features {
+     text-align:center;
+     margin-top:80px;
+     justify-content: space-around;
+}
+ .features img {
+     margin-bottom:20px;
+     width:100px;
+}
+ #find-out {
+     color:#fff;
+     background:url('img/background_2.png');
+     background-size:cover;
+}
+ .find-out {
+     text-align:center;
+     justify-content: space-around;
+}
+ .find-out > div {
+     height:205px;
+     padding:0;
+     margin:0 15px 0 15px;
+     position:relative;
+}
+ .find-out > div .hver {
+     cursor:pointer;
+     width:200px;
+     height:205px;
+     visibility:hidden;
+     transition: visibility 0s, opacity 0.2s linear;
+     position:absolute;
+     top:50%;
+     left:50%;
+     transform:translate(-50%, -50%);
+     opacity:0;
+}
+ .find-out > div:hover .hver {
+     border-radius:10px;
+     opacity:1;
+     visibility:visible;
+     background:linear-gradient(to right, rgba(245, 163, 3, 1), rgba(159, 170, 34, 1));
+}
+ .find-out img {
+     border:1px solid rgba(0, 0, 0, 0.1);
+     cursor:pointer;
+     border-radius:10px;
+     max-width:200px;
+     height:205px;
+}
+ .find-out p {
+     font-weight:bold;
+     position:absolute;
+     top:50%;
+     left:50%;
+     transform:translate(-50%, -50%);
+     font-size:1.2em;
+     color:#fff;
+}
+
+ #kontakt {
+     overflow-x: hidden;
+     color:#fff;
+     background-size:cover;
+     animation:bgcolor 10s infinite;
+}
+ #kontakt input, #kontakt textarea {
+     color:#fff;
+     margin:15px 0;
+     display:block;
+     width:100%;
+     border:1px solid #fff;
+     background:rgba(255, 255, 255, 0.1);
+     padding:1em 2em;
+     border-radius:3px;
+}
+ #kontakt input::placeholder, #kontakt textarea::placeholder {
+     color:#fff;
+}
+ .snt-separator {
+     padding:20px 0;
+}
+ #action-notice {
+     display:none;
+     z-index:1000;
+     position:fixed;
+     bottom:0;
+     left:0;
+     width:100%;
+     color:#fff;
+}
+ .notice-success {
+     padding: 18px 0;
+     background:rgb(74, 222, 33);
+}
+ .notice-fail {
+     padding: 18px 0;
+     background:rgb(222, 43, 33);
+}
+/* equal card height */
+ .row-equal > div[class*='col-'] {
+     display: flex;
+     flex: 1 0 auto;
+}
+ .card {
+     padding:20px;
+     color:#000;
+}
+ .card h2 {
+     text-align:center;
+}
+ .row-equal .card {
+     width: 100%;
+}
+/* ensure equal card height inside carousel */
+ .carousel-inner>.row-equal.active, .carousel-inner>.row-equal.next, .carousel-inner>.row-equal.prev {
+     display: flex;
+}
+/* prevent flicker during transition */
+ .carousel-inner>.row-equal.active.left, .carousel-inner>.row-equal.active.right {
+     opacity: 0.5;
+     display: flex;
+}
+/* control image height */
+ .card-img-top-250 {
+     max-height: 250px;
+     overflow:hidden;
+}
+ ul.list {
+     list-style-position: inside;
+     list-style: none;
+     padding-left: 0;
+}
+ ul.list li:before {
+     content: "\2022";
+     color:rgb(245, 163, 3);
+     font-weight: bold;
+     display: inline-block;
+     width: 1em;
+     transition:0.25s all;
+}
+ .carousel-item > .row {
+     justify-content: space-around;
+}
+ .carousel-item > .row > div {
+     display:flex;
+     flex: 1 0 auto;
+}
+ footer {
+     padding:30px 0;
+}
+ footer a {
+     font-weight:bold;
+}
+ footer > .container {
+     overflow:hidden;
+}
+ .copyr {
+     float:left;
+}
+ .author {
+     float:right;
+}
+ @keyframes bgcolor {
+     0% {
+         background-color: #42bcf5
+    }
+     20% {
+         background-color: #4290f5
+    }
+     40% {
+         background-color: #4266f5
+    }
+     60% {
+         background-color: #4290f5
+    }
+     100% {
+         background-color: #42bcf5
+    }
+}
